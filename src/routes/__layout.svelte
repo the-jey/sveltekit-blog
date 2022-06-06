@@ -9,8 +9,14 @@
 </script>
 
 <script>
-	import Nav from '../lib/nav.svelte';
+	import { onMount } from 'svelte';
+	import { themeChange } from 'theme-change';
 	import '../app.css';
+	import Nav from '../lib/nav.svelte';
+
+	onMount(async () => {
+		themeChange(false);
+	});
 
 	export let pages;
 </script>
